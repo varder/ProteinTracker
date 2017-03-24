@@ -6,7 +6,6 @@ import org.hibernate.Session;
 
 public class Program {
 
-
 	public static void main(String[] args) {
 		System.out.println("Hello world");
 		Session session = HibernateUtilities.getSessionFactory().openSession();
@@ -17,11 +16,11 @@ public class Program {
 		user.addHistory(new UserHistory(new Date(), "Set name to Joe"));
 		user.getProteinData().setGoal(250);
 		user.addHistory(new UserHistory(new Date(), "Set the goal to 250"));
-		
-//		user.getGoalAlerts().add(new GoalAlert("Congratulations!"));
-//		user.getGoalAlerts().add(new GoalAlert("You did it!"));
-		
-		session.save(user);
+
+		user.getGoalAlerts().add(new GoalAlert("Congratulations "));
+		user.getGoalAlerts().add(new GoalAlert("You have done this "));
+
+ 		session.save(user);
 				
 		session.getTransaction().commit();
 		

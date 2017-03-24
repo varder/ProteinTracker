@@ -9,7 +9,6 @@
             <generator class="increment"></generator>
         </id>
         <one-to-one name="user" class="com.simpleprogrammer.User" property-ref="proteinData" />
-        <!--property-ref="proteinData"-->
         <property name="total" type="int">
             <column name="TOTAL" />
         </property>

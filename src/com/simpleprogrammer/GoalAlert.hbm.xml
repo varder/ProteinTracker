@@ -4,7 +4,13 @@
 <!-- Generated Jul 16, 2013 7:24:48 PM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="com.simpleprogrammer.GoalAlert" table="GOALALERT">
-       <id name="id" type="int"/>
+       <id name="id" type="int">
+           <column name="ID"></column>
+           <generator class="increment"></generator>
+       </id>
+        <property name="messege" type="java.lang.String">
+            <column name="MESSAGE"></column>
+        </property>
     </class>
 
 

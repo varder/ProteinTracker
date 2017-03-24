@@ -13,8 +13,8 @@ public class User {
 	private ProteinData proteinData;
 	
 	private List<UserHistory> history = new ArrayList<UserHistory>();
-	
-//	private Set<GoalAlert> goalAlerts = new HashSet<GoalAlert>();
+
+	private Set<GoalAlert> goalAlerts = new HashSet<>();
 
 	public User() {
 		setProteinData(new ProteinData());
@@ -50,6 +50,14 @@ public class User {
 	{
 		historyItem.setUser(this);
 		history.add(historyItem);
+	}
+
+	public Set<GoalAlert> getGoalAlerts() {
+		return goalAlerts;
+	}
+
+	public void setGoalAlerts(Set<GoalAlert> goalAlerts) {
+		this.goalAlerts = goalAlerts;
 	}
 
 //	public Set<GoalAlert> getGoalAlerts() {
