@@ -45,6 +45,7 @@ public class Program {
 		session.close();
 		HibernateUtilities.getSessionFactory().close();
 		System.out.print("complete ");
+		System.out.print("hello git kracken ");
 
 	}
 
